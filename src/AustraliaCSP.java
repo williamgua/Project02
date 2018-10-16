@@ -28,6 +28,8 @@ public class AustraliaCSP extends core.CSP {
 		this.variables.add(SA);
 		Variable T = new Variable("T", Domain.rgbDomain());
 		this.variables.add(T);
+		//set of variables; each var: name + domain; domain returns a set of possible values; add all
+		
 		this.constraints = new HashSet<core.Constraint>();
 		this.constraints.add(new NotEqualConstraint(SA, WA));
 		this.constraints.add(new NotEqualConstraint(SA, NT));
@@ -38,11 +40,12 @@ public class AustraliaCSP extends core.CSP {
 		this.constraints.add(new NotEqualConstraint(NT, Q));
 		this.constraints.add(new NotEqualConstraint(Q, NSW));
 		this.constraints.add(new NotEqualConstraint(NSW, V));
+		//set of constraints; classes for diff types of constraints; add all
 	}
 
 	public static void main(String[] args) {
 		System.out.println("Australia Map Coloring Problem (AIMA 6.1.1)");
-		CSP csp = new aus.CSP();
+		CSP csp = new aus.CSP(); //aus is a sub class
 		System.out.println(csp);
 		System.out.println("Backtracking search solver");
 		Solver solver = new solver.BacktrackingSearchSolver();
@@ -51,5 +54,9 @@ public class AustraliaCSP extends core.CSP {
 		long end = new Date().getTime();
 		System.out.format("time: %.3f secs\n", (end-start)/1000.0);
 		System.out.println("result=" + result);
+		//Structure of this proj:
+		// CSP: interface -> CoreCSP (generic) -> 3 specific CSP
+		// Solver: class contains Backtracking algorithms
+		// Main
 	}
 }
