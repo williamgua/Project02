@@ -5,14 +5,12 @@ import java.util.Date;
 import java.util.HashSet;
 
 /**
- * Constraint satisfaction problem for coloring the map of Australia,
+ * Constraint satisfaction problem for coloring the map of Australia, 
  * from AIMA Section 6.1 and Fig 6.1.
  */
 public class AustraliaCSP extends core.CSP {
 	
-	/**
-	 * Construct a new instance of the CSP for coloring the map of
-	 * Australia.
+	/**	 * Australia.
 	 */
 	public AustraliaCSP() {
 		this.variables = new HashSet<core.Variable>();
