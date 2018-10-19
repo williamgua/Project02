@@ -1,4 +1,4 @@
-Collaboraters: Kehao Guo, Haozhang Deng, Xing Li
+Collaboraters: Kehao Guo (kguo), Haozhang Deng (hdeng5), Xing Li (xli98)
 
 Project Building:
 Please unzip the file. All the source codes are in the src folder. You can run either by an IDE or by cmd/Terminal.
